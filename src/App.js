@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { css } from '@emotion/react'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div css={css({
+        margin: 10,
+        padding: 10,
+        backgroundColor: '#eee',
+      })}>
+        This is an example of <code>`css`</code> using an object.
+      </div>
+      <div css={css`
+        margin: 10px;
+        padding: 10px;
+        background-color: #eee;
+      `}>
+        This is an example of <code>`css`</code> using a tagged template literal.
+      </div>
     </div>
   );
 }
